@@ -10,6 +10,7 @@
         <module name="Dept_8081" />
         <module name="DeptCustomer_8082" />
         <module name="eureka_8083" />
+        <module name="eureka_8084" />
       </profile>
     </annotationProcessing>
   </component>

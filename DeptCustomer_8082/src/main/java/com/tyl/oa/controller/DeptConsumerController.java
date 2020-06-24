@@ -19,6 +19,7 @@ import java.util.List;
 //这个restTemplate是用来发起url请求的，利用restful风格，把8081端口的服务复制到这个8082端口，
 //这个服务有个奇怪的地方（误？），如果请求8081端口的服务，直接返回到8082，就是把8081所有端口塞到8082上面，但是8082不会塞到8081上
 //经过测试，不打开8081也可使用8081端口操作，意味着，这是把8081端口的所有接口，全部本地复制到8082
+    //且端口的控制层路径不能重名，不然会报错
 @RestController
 public class DeptConsumerController {
     @Autowired

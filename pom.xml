@@ -12,6 +12,7 @@
         <module>Dept_8081</module>
         <module>DeptCustomer_8082</module>
         <module>eureka_8083</module>
+        <module>eureka_8084</module>
     </modules>
     <dependencyManagement>
         <dependencies>
