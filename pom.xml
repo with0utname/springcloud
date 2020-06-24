@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tyl</groupId>
+    <artifactId>springcloud</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>Dept_8081</module>
+        <module>DeptCustomer_8082</module>
+        <module>eureka_8083</module>
+    </modules>
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-commons -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-commons</artifactId>
+                <version>2.2.2.RELEASE</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-context -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-context</artifactId>
+                <version>2.2.2.RELEASE</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-config -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-config</artifactId>
+                <version>2.2.2.RELEASE</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>2.3.0.RELEASE</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>2.3.0.RELEASE</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>2.3.0.RELEASE</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>2.3.0.RELEASE</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>2.3.0.RELEASE</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.12</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-redis</artifactId>
+                <version>2.3.0.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>5.2.6.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>2.3.0.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot</artifactId>
+                <version>2.3.0.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>5.2.6.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-test</artifactId>
+                <version>2.3.0.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>2.3.0.RELEASE</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>2.11.0</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>2.11.0</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>2.11.0</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+                <version>2.3.0.RELEASE</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-eureka</artifactId>
+                <version>1.4.6.RELEASE</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+                <version>2.2.1.RELEASE</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                <version>2.2.1.RELEASE</version>
+            </dependency>
+            <!-- eureka好像是需要gson进行支持的-->
+            <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>2.8.6</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>2.2.7.RELEASE</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>
