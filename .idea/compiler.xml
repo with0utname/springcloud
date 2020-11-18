@@ -8,9 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Dept_8081" />
-        <module name="DeptCustomer_8082" />
-        <module name="eureka_8083" />
-        <module name="eureka_8084" />
+        <module name="DeptCustomer_80" />
+        <module name="eureka_7001" />
+        <module name="eureka_7002" />
+        <module name="eureka_7003" />
       </profile>
     </annotationProcessing>
   </component>

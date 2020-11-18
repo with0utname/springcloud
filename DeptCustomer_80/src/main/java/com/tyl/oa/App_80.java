@@ -2,21 +2,20 @@ package com.tyl.oa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
 
 /**
  * @program: springcloud
  * @description:
  * @author: tututyl
- * @create: 2020-06-15 19:07
+ * @create: 2020-06-15 19:08
  **/
 
-@EnableDiscoveryClient
-@EnableEurekaClient
 @SpringBootApplication
-public class App_8081 {
+@EnableEurekaClient
+public class App_80 {
     public static void main(String[] args) {
-        SpringApplication.run(App_8081.class,args);
+        SpringApplication.run(App_80.class,args);
     }
 }

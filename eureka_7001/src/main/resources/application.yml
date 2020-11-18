@@ -1,0 +1,27 @@
+#不能这样随意注册元素，会失败
+#com:
+#  tyl:
+#    server8083:
+#      httpName: eureka8083.com
+#      serverPort: 8083
+#    server8084:
+#      httpName: eureka8084.com
+#        serverPort: 8084
+#端口为7001的一个服务中心
+server:
+  port: 7001
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: Eureka_7001_eureka_instance_instanceId
+    prefer-ip-address: false
+  client:
+    register-with-eureka: false #服务注册 false 自己不注册到服务中心
+    fetchRegistry: false   #服务发现  表示自己端就是注册中心 我的职责就是维护服务实例 false  自己不获取注册信息
+    service-url:    #集群的情况下，服务端之间要互相注册，指向对方
+      #defaultZone: http://eureka7001.com:7001
+      defaultZone: http://eureka7002.com:7002,http://eureka7003.com:7003
+#http://Eureka7001.com:7001/eureka/指向另外一个端口为7001的服务中心
+spring:
+  application:
+    name: Eureka_7001

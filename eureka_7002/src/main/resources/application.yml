@@ -1,0 +1,18 @@
+#端口为7002的一个服务中心
+server:
+  port: 7002
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: Eureka_7002_eureka_instance_instanceId
+    prefer-ip-address: false
+  client:
+    register-with-eureka: false #服务注册 false 自己不注册到服务中心
+    fetchRegistry: false   #服务发现  表示自己端就是注册中心 我的职责就是维护服务实例 false  自己不获取注册信息
+    service-url:    #集群的情况下，服务端之间要互相注册，指向对方
+      defaultZone: http://eureka7001.com:7001,http://eureka7003.com:7003
+#      defaultZone: http://${com.tyl.server8083.httpName}:${com.tyl.server8083.serverPort}/eureka/
+#看别人说，如果要配置三个以上，只需要弄成回字型即可
+spring:
+  application:
+    name: Eureka_7002

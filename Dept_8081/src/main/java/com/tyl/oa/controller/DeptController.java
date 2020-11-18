@@ -1,12 +1,14 @@
 package com.tyl.oa.controller;
 
+
 import com.tyl.oa.pojo.Dept;
 import com.tyl.oa.service.impl.DeptServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,9 +23,11 @@ import java.util.concurrent.TimeUnit;
 @RestController
 public class DeptController {
     @Autowired
-    RedisTemplate redisTemplate;
+    private RedisTemplate redisTemplate;
     @Autowired
-    DeptServiceImpl deptServiceImpl;
+    private DeptServiceImpl deptServiceImpl;
+    @Autowired
+    private DiscoveryClient client;
 
 
     //server的缓存数据就算localhost关闭都不会丢失
@@ -106,5 +110,28 @@ http://127.0.0.1/user DELETE 删除用户信息
     @DeleteMapping("/dept/delete")
     public void deleteDept(Dept dept) {
         deptServiceImpl.deleteDept(dept);
+    }
+
+
+
+    /*
+    *eureka的配置
+     */
+    @GetMapping("/discovery")
+    public Object discovery(){
+        List<String> services = client.getServices();
+        System.out.println("discovery===>"+services);
+
+        List<ServiceInstance> instances =  client.getInstances("springcould-dept_8081_tyl_instance_id");
+
+        for ( ServiceInstance instance : instances){
+            System.out.println(
+                    instance.getHost()+"\t"+
+                    instance.getPort()+"\t"+
+                    instance.getUri()+"\t"+
+                    instance.getServiceId()+"\t"
+            );
+        }
+        return this.client;
     }
 }
